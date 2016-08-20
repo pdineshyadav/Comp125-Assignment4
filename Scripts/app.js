@@ -16,6 +16,16 @@ var core;
         stage.update();
     }
     function main() {
+         var clickMeButton = new createjs.Bitmap("../Assets/Images/clickMeButton.png");
+        stage.addChild(clickMeButton);
+        clickMeButton.addEventListener("click",clicked);
+        clickMeButton.x = 70;
+        clickMeButton.y = 200;
+        var thought = new objects.Label("Cricket","20px Consolas", "#000000", 50, 50, true);
+        stage.addChild(thought);
+    }
+    function clicked() {
+        window.open("http://comp125assignment2update.azurewebsites.net/projects.html")
     }
     window.addEventListener("load", init);
 })(core || (core = {}));
