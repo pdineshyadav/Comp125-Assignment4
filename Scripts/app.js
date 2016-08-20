@@ -1,8 +1,18 @@
+/**
+Filename = app.js
+@author Dinesh Palle
+@date : 19th August 2016
+StudentID : 300705307
+Website : http://comp125-assignment5.azurewebsites.net/
+@description : This is the main css file of this website
+*/
+
 var core;
 (function (core) {
     "use strict";
     var canvas;
     var stage;
+    var text;
     // app entry function
     function init() {
         canvas = document.getElementById("canvas");
@@ -11,6 +21,7 @@ var core;
         createjs.Ticker.framerate = 60;
         createjs.Ticker.on("tick", gameLoop);
         main();
+
     }
     function gameLoop() {
         stage.update();
@@ -21,9 +32,10 @@ var core;
         clickMeButton.addEventListener("click",clicked);
         clickMeButton.x = 70;
         clickMeButton.y = 200;
-        var thought = new objects.Label("Cricket","20px Consolas", "#000000", 50, 50, true);
-        stage.addChild(thought);
     }
+
+
+
     function clicked() {
         window.open("http://comp125assignment2update.azurewebsites.net/projects.html")
     }
